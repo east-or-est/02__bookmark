@@ -38,7 +38,7 @@
         @apply bg-[var(--color-illust)] border-[var(--color-illust)]
     }
     .bookmarkContent-list button {
-        @apply flex flex-col w-full text-gray-500 box-border py-2 transition-colors border-y border-gray-400 px-4 md:border md:px-1
+        @apply flex flex-col w-full text-gray-500 box-border py-2 transition-colors border-y border-gray-400 items-center px-4 md:border md:px-1
     }
     .bookmarkContent-list button:hover {
         @apply bg-gray-400 text-white
