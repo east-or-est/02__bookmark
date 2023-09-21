@@ -9,6 +9,15 @@ function Footer() {
       <PageTop />
       <div className="bg-gray-200 mb-8 py-4 px-4 md:px-6">
         <ul className="footer-list">
+        <li>
+            <a
+              href="https://github.com/east-or-est/02__privacy/tree/main/ディライブポイント/bookmark"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              プライバシーポリシー
+            </a>
+          </li>
           <li>
             <a
               href="https://works.derive-point.work/"
