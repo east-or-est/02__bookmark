@@ -4,8 +4,9 @@
 
 :root {
     --color-pg: #5D739D;
+    --color-server: #6e5d9d;
     --color-sec: #5D989D;
-    --color-illust: #9D5D5D;
+    --color-creative: #9D5D5D;
 }
 
 
@@ -20,7 +21,7 @@
         @apply overflow-x-scroll md:overflow-x-auto mb-4 py-4 mx-4 md:mx-6
     }
     .bookmarkContent-list ul {
-        @apply w-[110%] flex md:w-auto md:mx-auto md:max-w-7xl md:grid md:gap-2 md:grid-cols-5
+        @apply w-[200%] flex md:w-auto md:mx-auto md:max-w-7xl md:grid md:gap-2 md:grid-cols-5
     }
     .bookmarkContent-list li {
         @apply grid grow
@@ -31,11 +32,14 @@
     .bookmarkContent-list li[data-sel="true"][data-cat="pg"] button {
         @apply bg-[var(--color-pg)] border-[var(--color-pg)]
     }
+    .bookmarkContent-list li[data-sel="true"][data-cat="server"] button {
+        @apply bg-[var(--color-server)] border-[var(--color-server)]
+    }
     .bookmarkContent-list li[data-sel="true"][data-cat="sec"] button {
         @apply bg-[var(--color-sec)] border-[var(--color-sec)]
     }
-    .bookmarkContent-list li[data-sel="true"][data-cat="illust"] button {
-        @apply bg-[var(--color-illust)] border-[var(--color-illust)]
+    .bookmarkContent-list li[data-sel="true"][data-cat="creative"] button {
+        @apply bg-[var(--color-creative)] border-[var(--color-creative)]
     }
     .bookmarkContent-list button {
         @apply flex flex-col w-full text-gray-500 box-border py-2 transition-colors border-y border-gray-400 items-center px-4 md:border md:px-1
@@ -55,11 +59,14 @@
     .bookmarkList[data-cat="pg"] h2 {
         @apply bg-[var(--color-pg)]
     }
+    .bookmarkList[data-cat="server"] h2 {
+        @apply bg-[var(--color-server)]
+    }
     .bookmarkList[data-cat="sec"] h2 {
         @apply bg-[var(--color-sec)]
     }
-    .bookmarkList[data-cat="illust"] h2 {
-        @apply bg-[var(--color-illust)]
+    .bookmarkList[data-cat="creative"] h2 {
+        @apply bg-[var(--color-creative)]
     }
     .bookmarkBox thead {
         @apply hidden
@@ -83,11 +90,14 @@
     .bookmarkList[data-cat="pg"] .bookmarkBox tr::before {
         @apply bg-[var(--color-pg)]
     }
+    .bookmarkList[data-cat="server"] .bookmarkBox tr::before {
+        @apply bg-[var(--color-server)]
+    }
     .bookmarkList[data-cat="sec"] .bookmarkBox tr::before {
         @apply bg-[var(--color-sec)]
     }
-    .bookmarkList[data-cat="illust"] .bookmarkBox tr::before {
-        @apply bg-[var(--color-illust)]
+    .bookmarkList[data-cat="creative"] .bookmarkBox tr::before {
+        @apply bg-[var(--color-creative)]
     }
     .bookmarkBox tr:hover {
         @apply shadow-lg
@@ -104,11 +114,14 @@
     .bookmarkList[data-cat="pg"] .bookmarkBox tr td:nth-of-type(1) {
         @apply text-[var(--color-pg)]
     }
+    .bookmarkList[data-cat="server"] .bookmarkBox tr td:nth-of-type(1) {
+        @apply text-[var(--color-server)]
+    }
     .bookmarkList[data-cat="sec"] .bookmarkBox tr td:nth-of-type(1) {
         @apply text-[var(--color-sec)]
     }
-    .bookmarkList[data-cat="illust"] .bookmarkBox tr td:nth-of-type(1) {
-        @apply text-[var(--color-illust)]
+    .bookmarkList[data-cat="creative"] .bookmarkBox tr td:nth-of-type(1) {
+        @apply text-[var(--color-creative)]
     }
     .bookmarkBox tr td:nth-of-type(2) {
         @apply text-base md:text-xl
@@ -122,11 +135,14 @@
     .bookmarkList[data-cat="pg"] .bookmarkBox tr td:nth-of-type(3) a:hover::before  {
         @apply bg-[var(--color-pg)]
     }
+    .bookmarkList[data-cat="server"] .bookmarkBox tr td:nth-of-type(3) a:hover::before  {
+        @apply bg-[var(--color-server)]
+    }
     .bookmarkList[data-cat="sec"] .bookmarkBox tr td:nth-of-type(3) a:hover::before  {
         @apply bg-[var(--color-sec)]
     }
-    .bookmarkList[data-cat="illust"] .bookmarkBox tr td:nth-of-type(3) a:hover::before  {
-        @apply bg-[var(--color-illust)]
+    .bookmarkList[data-cat="creative"] .bookmarkBox tr td:nth-of-type(3) a:hover::before  {
+        @apply bg-[var(--color-creative)]
     }
     .bookmarkBox tr td:nth-of-type(4) {
         @apply text-gray-400 inline-block mt-1 text-xs md:text-sm
