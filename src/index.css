@@ -3,10 +3,12 @@
 
 
 :root {
-    --color-pg: #5D739D;
+    --color-web: #4e7a9e;
+    --color-pg: #4f659b;
     --color-server: #6e5d9d;
     --color-sec: #5D989D;
     --color-creative: #9D5D5D;
+    --color-tools: #9e713e;
 }
 
 
@@ -21,7 +23,7 @@
         @apply overflow-x-scroll md:overflow-x-auto mb-4 py-4 mx-4 md:mx-6
     }
     .bookmarkContent-list ul {
-        @apply w-[200%] flex md:w-auto md:mx-auto md:max-w-7xl md:grid md:gap-2 md:grid-cols-5
+        @apply w-[400%] text-xs flex md:w-auto md:mx-auto md:max-w-7xl md:grid md:gap-2 md:grid-cols-4 lg:grid-cols-6
     }
     .bookmarkContent-list li {
         @apply grid grow
@@ -29,9 +31,17 @@
     .bookmarkContent-list li[data-sel="true"] button {
         @apply text-white pointer-events-none
     }
+    .bookmarkContent-list li[data-sel="true"] button {
+        @apply bg-gray-500 border-gray-500
+    }
+    .bookmarkContent-list li[data-sel="true"][data-cat="web"] button,
+    .bookmarkContent-list li[data-sel="true"][data-cat="wp"] button {
+        @apply bg-[var(--color-web)] border-[var(--color-web)]
+    }
     .bookmarkContent-list li[data-sel="true"][data-cat="pg"] button {
         @apply bg-[var(--color-pg)] border-[var(--color-pg)]
     }
+    .bookmarkContent-list li[data-sel="true"][data-cat="command"] button,
     .bookmarkContent-list li[data-sel="true"][data-cat="server"] button {
         @apply bg-[var(--color-server)] border-[var(--color-server)]
     }
@@ -40,6 +50,9 @@
     }
     .bookmarkContent-list li[data-sel="true"][data-cat="creative"] button {
         @apply bg-[var(--color-creative)] border-[var(--color-creative)]
+    }
+    .bookmarkContent-list li[data-sel="true"][data-cat="tools"] button {
+        @apply bg-[var(--color-tools)] border-[var(--color-tools)]
     }
     .bookmarkContent-list button {
         @apply flex flex-col w-full text-gray-500 box-border py-2 transition-colors border-y border-gray-400 items-center px-4 md:border md:px-1
@@ -54,11 +67,16 @@
         @apply max-w-3xl mx-auto
     } 
     .bookmarkList h2 {
-        @apply bg-gray-400 text-white
+        @apply bg-gray-500 text-white
+    }
+    .bookmarkList[data-cat="web"] h2,
+    .bookmarkList[data-cat="wp"] h2 {
+        @apply bg-[var(--color-web)] 
     }
     .bookmarkList[data-cat="pg"] h2 {
         @apply bg-[var(--color-pg)]
     }
+    .bookmarkList[data-cat="command"] h2,
     .bookmarkList[data-cat="server"] h2 {
         @apply bg-[var(--color-server)]
     }
@@ -67,6 +85,9 @@
     }
     .bookmarkList[data-cat="creative"] h2 {
         @apply bg-[var(--color-creative)]
+    }
+    .bookmarkList[data-cat="tools"] h2 {
+        @apply bg-[var(--color-tools)]
     }
     .bookmarkBox thead {
         @apply hidden
@@ -80,6 +101,9 @@
     }
     .bookmarkBox table {
         @apply border-spacing-0
+    }
+    .bookmarkBox tbody {
+        @apply flex-col-reverse
     }
     .bookmarkBox tr {
         @apply flex-col relative pt-10 pr-16 pb-4 pl-6 box-border min-h-[160px] text-gray-500 bg-white border-separate border border-gray-300 transition-shadow z-[1]
@@ -106,7 +130,7 @@
         @apply opacity-10
     }
     .bookmarkBox tr + tr {
-        @apply mt-2
+        @apply mb-2
     }
     .bookmarkBox tr td:nth-of-type(1) {
         @apply absolute left-3 top-2 z-10 font-bold
